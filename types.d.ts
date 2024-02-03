@@ -12,6 +12,7 @@ interface Repo {
   name: string;
   language: string;
   html_url: string;
+  fork: boolean;
   stargazers_count: string;
   watchers_count: string;
 }
