@@ -4,6 +4,8 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+import TanStackProvider from "@/providers/TanStackProvider";
+
 export const metadata: Metadata = {
   title: "GitHub Integration",
   description: "See GitHub repos",
@@ -15,8 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <TanStackProvider>
+      <html lang="en">
+        <body className={inter.className}>{children}</body>
+      </html>
+    </TanStackProvider>
   );
 }
