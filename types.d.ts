@@ -3,6 +3,7 @@ interface User {
   username: string;
   login: string;
   bio: string;
+  repos_count?: number;
   followers: number;
   followings: number;
   location: string;
