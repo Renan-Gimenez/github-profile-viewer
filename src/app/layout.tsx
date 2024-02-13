@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 import TanStackProvider from "@/providers/TanStackProvider";
 
 export const metadata: Metadata = {
-  title: "GitHub Integration",
-  description: "See GitHub repos",
+  title: "GitHub Profile Viewer",
+  description: "View GitHub profile and repositories",
 };
 
 export default function RootLayout({
