@@ -10,7 +10,9 @@ export function Repo({ repo, index }: Props) {
     <div key={index} className="flex items-center justify-between px-2 py-4">
       <div className="flex flex-col justify-start gap-1">
         <div className="flex items-center gap-2">
-          <div className="h-5 w-5">{repo.fork ? <GitFork /> : <Book />}</div>
+          <div className="h-5 w-5 text-[#E1E1E6]">
+            {repo.fork ? <GitFork /> : <Book />}
+          </div>
           <a
             href={repo.html_url}
             target="_blank"
