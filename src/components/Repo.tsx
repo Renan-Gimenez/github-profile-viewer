@@ -7,26 +7,19 @@ interface Props {
 
 export function Repo({ repo, index }: Props) {
   return (
-    <div
-      key={index}
-      className="flex items-center justify-between gap-8 px-2 py-4"
-    >
-      <div className="flex flex-col justify-start">
+    <div key={index} className="flex items-center justify-between px-2 py-4">
+      <div className="flex flex-col justify-start gap-1">
         <div className="flex items-center gap-2">
-          {repo.fork ? (
-            <GitFork className="h-5 w-5" />
-          ) : (
-            <Book className="h-5 w-5" />
-          )}
+          <div className="h-5 w-5">{repo.fork ? <GitFork /> : <Book />}</div>
           <a
             href={repo.html_url}
             target="_blank"
-            className="font-bold text-xl hover:underline"
+            className="font-bold text-xl max-sm:text-base hover:underline"
           >
             {repo.name}
           </a>
         </div>
-        <span className="text-[#E1E1E6]">{repo.language}</span>
+        <span className="text-[#E1E1E6] max-sm:text-sm">{repo.language}</span>
       </div>
 
       <div className="flex flex-col gap-1 text-[#C4C4CC]">

@@ -30,14 +30,14 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-[#121214] p-36">
+    <main className="flex min-h-screen flex-col items-center bg-[#121214] px-8 py-36">
       <SearchBar setUsername={setUsername} />
 
       {profileData ? (
         <>
           <UserProfile user={profileData} />
           {reposData && reposData.length > 0 ? (
-            <div className="w-[448px] rounded-2xl bg-[#202024]">
+            <div className="max-w-[448px] w-full rounded-2xl bg-[#202024]">
               <RepoList repos={reposData} />
             </div>
           ) : (
