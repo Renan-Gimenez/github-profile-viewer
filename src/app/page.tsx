@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { useFetchProfile, useFetchRepos } from "@/services/githubService";
+
 import { SearchBar } from "@/components/SearchBar";
 import { UserProfile } from "@/components/UserProfile";
 import { RepoList } from "@/components/RepoList";
@@ -10,8 +12,7 @@ import { FirstPage } from "@/components/FirstPage";
 import { RepoNotFound } from "@/components/RepoNotFound";
 import { UserNotFound } from "@/components/UserNotFound";
 
-import { Loader } from "lucide-react";
-import { useFetchProfile, useFetchRepos } from "@/services/githubService";
+import { Loader } from "@/components/Loader";
 
 export default function Home() {
   const [username, setUsername] = useState("");
@@ -22,11 +23,7 @@ export default function Home() {
     useFetchRepos(username);
 
   if (isloadingProfile || isLoadingRepos) {
-    return (
-      <div className="h-screen w-screen flex items-center justify-center ring ring-red-500 bg-[#121214]">
-        <Loader className="h-10 w-auto text-white animate-spin" />
-      </div>
-    );
+    return <Loader />;
   }
 
   return (
