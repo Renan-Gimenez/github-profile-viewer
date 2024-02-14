@@ -6,6 +6,7 @@ interface User {
   repos_count?: number;
   followers: number;
   followings: number;
+  company: string;
   location: string;
 }
 

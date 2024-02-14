@@ -1,4 +1,4 @@
-import { MapPin, UsersRound } from "lucide-react";
+import { Building, MapPin, UsersRound } from "lucide-react";
 
 interface Props {
   user: User;
@@ -7,10 +7,8 @@ interface Props {
 export function UserProfile({ user }: Props) {
   return (
     <div className="max-w-sm flex flex-col items-center gap-6 text-center my-8">
-      {/* IMAGE */}
       <img src={user.avatar} alt="Avatar" className="h-32 rounded-full" />
 
-      {/* BIO */}
       <div className="flex flex-col gap-2">
         <div>
           <p className="font-bold text-2xl">{user.username}</p>
@@ -19,12 +17,17 @@ export function UserProfile({ user }: Props) {
         <p className="text-[#C4C4CC]">{user.bio}</p>
       </div>
 
-      {/* OUTROS */}
       <div className="flex flex-col text-[#C4C4CC]">
         <span className="flex gap-2">
           <UsersRound className="h-6 w-6" />{" "}
           {`${user.followers} followers | ${user.followings} followings`}
         </span>
+
+        {user.company && (
+          <span className="flex mx-auto gap-2">
+            <Building className="h-6 w-6" /> {`${user.company}`}
+          </span>
+        )}
 
         {user.location && (
           <span className="flex mx-auto gap-2">

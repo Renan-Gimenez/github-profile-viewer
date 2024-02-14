@@ -23,6 +23,7 @@ export const useFetchProfile = (username: string) => {
             repos_count: data.public_repos,
             followers: data.followers,
             followings: data.following,
+            company: data.company,
             location: data.location,
           };
 
