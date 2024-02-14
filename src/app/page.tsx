@@ -38,7 +38,7 @@ export default function Home() {
               <RepoList repos={reposData} />
             </div>
           ) : (
-            <RepoNotFound />
+            <RepoNotFound username={username} />
           )}
         </>
       ) : username ? (

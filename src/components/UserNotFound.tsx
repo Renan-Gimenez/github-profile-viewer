@@ -6,9 +6,9 @@ interface Props {
 
 export function UserNotFound({ username }: Props) {
   return (
-    <div className="flex flex-col items-center gap-4 text-center p-12">
+    <div className="flex flex-col items-center text-center gap-4 p-12 text-[#E1E1E6]">
       <UserRoundX className="h-16 w-16" />
-      <span className="text-xl">{`User "${username}" not found`}</span>
+      <span>{`User '${username}' not found`}</span>
     </div>
   );
 }
