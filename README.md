@@ -14,6 +14,7 @@ GitHub Profile Viewer is a web application built with Next.js, TypeScript, and T
 - Sentry
 - Cypress
 - Infinite Scroll
+- Filter Repositories
 
 ## Preview
 
