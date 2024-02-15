@@ -40,7 +40,11 @@ export function UserProfile({ user }: Props) {
             <Link className="h-5 w-5" />
             <a
               className="hover:underline"
-              href={`https://${user.blog}`}
+              href={
+                user.blog.startsWith("http")
+                  ? user.blog
+                  : `https://${user.blog}`
+              }
               target="_blank"
             >
               {" "}
