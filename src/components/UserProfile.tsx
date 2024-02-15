@@ -18,7 +18,7 @@ export function UserProfile({ user }: Props) {
       </div>
 
       <div className="flex flex-col text-[#C4C4CC]">
-        <span className="flex items-center gap-2">
+        <span className="flex items-center mx-auto gap-2">
           <UsersRound className="h-5 w-5" />{" "}
           {`${user.followers} followers | ${user.followings} followings`}
         </span>
