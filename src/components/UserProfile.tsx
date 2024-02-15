@@ -38,7 +38,11 @@ export function UserProfile({ user }: Props) {
         {user.blog && (
           <span className="flex items-center mx-auto gap-2">
             <Link className="h-5 w-5" />
-            <a className="hover:underline" href={user.blog}>
+            <a
+              className="hover:underline"
+              href={`https://${user.blog}`}
+              target="_blank"
+            >
               {" "}
               {`${user.blog}`}
             </a>
