@@ -1,4 +1,4 @@
-import { Building, MapPin, UsersRound } from "lucide-react";
+import { Building, Link, MapPin, UsersRound } from "lucide-react";
 
 interface Props {
   user: User;
@@ -32,6 +32,16 @@ export function UserProfile({ user }: Props) {
         {user.location && (
           <span className="flex items-center mx-auto gap-2">
             <MapPin className="h-5 w-5" /> {`${user.location}`}
+          </span>
+        )}
+
+        {user.blog && (
+          <span className="flex items-center mx-auto gap-2">
+            <Link className="h-5 w-5" />
+            <a className="hover:underline" href={user.blog}>
+              {" "}
+              {`${user.blog}`}
+            </a>
           </span>
         )}
       </div>

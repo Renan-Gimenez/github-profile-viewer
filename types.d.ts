@@ -8,6 +8,7 @@ interface User {
   followings: number;
   company: string;
   location: string;
+  blog: string;
 }
 
 interface Repo {

@@ -25,6 +25,7 @@ export const useFetchProfile = (username: string) => {
             followings: data.following,
             company: data.company,
             location: data.location,
+            blog: data.blog,
           };
 
           return userData;
