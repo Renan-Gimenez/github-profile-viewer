@@ -30,11 +30,11 @@ export function Repo({ repo, index }: Props) {
 
       <div className="flex flex-col gap-1 text-[#C4C4CC]">
         <span className="flex items-center gap-2 rounded-lg p-1 cursor-pointer transition-all hover:bg-[#81D8F7]/15">
-          <Star className="h-6 w-6 stroke-[1.5px]" />
+          <Star className="h-5 w-5 stroke-[1.5px]" />
           {repo.stargazers_count}
         </span>
         <span className="flex items-center gap-2 rounded-lg p-1 cursor-pointer transition-all hover:bg-[#81D8F7]/15">
-          <Eye className="h-h-6 w-6 stroke-[1.5px]" />
+          <Eye className="h-h-5 w-5 stroke-[1.5px]" />
           {repo.watchers_count}
         </span>
       </div>
