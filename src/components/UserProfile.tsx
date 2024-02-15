@@ -18,20 +18,20 @@ export function UserProfile({ user }: Props) {
       </div>
 
       <div className="flex flex-col text-[#C4C4CC]">
-        <span className="flex gap-2">
-          <UsersRound className="h-6 w-6" />{" "}
+        <span className="flex items-center gap-2">
+          <UsersRound className="h-5 w-5" />{" "}
           {`${user.followers} followers | ${user.followings} followings`}
         </span>
 
         {user.company && (
-          <span className="flex mx-auto gap-2">
-            <Building className="h-6 w-6" /> {`${user.company}`}
+          <span className="flex items-center mx-auto gap-2">
+            <Building className="h-5 w-5" /> {`${user.company}`}
           </span>
         )}
 
         {user.location && (
-          <span className="flex mx-auto gap-2">
-            <MapPin className="h-6 w-6" /> {`${user.location}`}
+          <span className="flex items-center mx-auto gap-2">
+            <MapPin className="h-5 w-5" /> {`${user.location}`}
           </span>
         )}
       </div>
